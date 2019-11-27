@@ -1,7 +1,5 @@
-// app_4_componentBased.js
-import jsxParser from './utils/my-jsx-parser.js';
-import { vDOM, renderVDom, renderComponent } from './utils/my-jsx-parser.js';
-import Component from './utils/component'
+import { renderComponent, Component } from './utils/component';
+import { vDOM } from './utils/vDOM';
 
 const getRandomItemFromArray = (list) => {
   return list[

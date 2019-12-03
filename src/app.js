@@ -1,5 +1,6 @@
 import { renderComponent, Component } from './utils/component';
 import { vDOM } from './utils/vDOM';
+import { diff } from './utils/diffing';
 
 const getRandomItemFromArray = (list) => {
   return list[
@@ -44,4 +45,8 @@ class People extends Component {
   }
 }
 
-renderComponent(new App(), document.querySelector('#root'))
+const render = (vnode, parent) => {
+  diff(undefined, vnode, parent);
+}
+render(vDOM(App), document.querySelector('#root'))
+// renderComponent(new App(), document.querySelector('#root'))
